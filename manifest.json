@@ -1,0 +1,17 @@
+{
+    "name": "チカチカページ",
+        "version": "0.0.1",
+        "manifest_version": 2,
+        "description": "スクロールするとチカチカします",
+        "browser_action": {
+            "default_icon": "icon.png",
+            "default_title": "チカチカするよ"
+        },
+        "content_scripts": [
+        {
+            "matches": ["http://*/*"],
+            "js": ["jquery.min.js","main.js"],
+            "run_at": "document_start"
+        }
+    ]
+}
